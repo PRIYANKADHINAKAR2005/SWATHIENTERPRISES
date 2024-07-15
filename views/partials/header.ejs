@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swathi Enterprises</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            const path = window.location.pathname;
+            
+           
+            $(".items").each(function() {
+                const linkPath = $(this).find("a").attr("href");
+                
+                if (linkPath === path) {
+                    $(this).addClass("activate");
+                    
+                }
+            });
+        });
+        function goToHomePage() {
+            window.location.href = '/';
+        }
+        
+       
+       
+    </script>
+</head>
+<body>
+    <div class="containerheader">
+    
+            <div class="header">
+                <img src="/images/LOGO.png" alt="Logo image" onclick="goToHomePage()">
+                <div class="title" onclick="goToHomePage()">
+                    <h1 class="title-1">SWATHI</h1>
+                    
+                    <h1 class="title-part2">ENTERPRISES</h1>
+                </div>
+                </div>
+           
+            
+        <div class="navbarheader">
+            <div class="nav">
+            <div class="items" active="true"><a href="/">Home</a></div>
+            <div class="items"><a href="/about">About Us</a></div>
+            <div class="items"><a href="/products">Products</a></div>
+            <div class="items"><a href="/contact">Contact Us</a></div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
