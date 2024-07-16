@@ -152,24 +152,7 @@
         </div>
     </section>
 
-    <!-- Quote Form Overlay -->
-    <div id="quoteFormOverlay" class="overlay">
-        <div class="popup">
-            <h2>Get Quote</h2>
-            <form id="quoteForm" action="/products/quote/1" method="POST">
-                <input type="hidden" id="productId" name="productId" value="">
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Email Id" required>
-                <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
-                <input type="number" id="quantity" name="quantity" placeholder="Quantity" required>
-                <textarea id="comments" name="comments" placeholder="Comments"></textarea>
-                <div class="form-buttons">
-                    <button type="button" id="clearBtn" class="btnq clear">Clear</button>
-                    <button type="submit" class="btnq submit">Get Quote</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    
 
     <!-- Footer -->
     <%- include("partials/footer.ejs") %>
