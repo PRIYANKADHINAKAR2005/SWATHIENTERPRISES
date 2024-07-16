@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "start": "node index.js",
-    "build": "npm start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "start": "node index.js",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "node index.js && mkdir public && cp -r views public/views"
+},
   "author": "Priyanka",
   "license": "ISC",
   "dependencies": {
