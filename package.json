@@ -7,7 +7,7 @@
  "scripts": {
   "start": "node index.js",
   "test": "echo \"Error: no test specified\" && exit 1",
-  "build": "node index.js && mkdir public && cp -r views public/views"
+ "build": "npm ci && node index.js && mkdir public && cp -r views public/views"
 },
   "author": "Priyanka",
   "license": "ISC",
