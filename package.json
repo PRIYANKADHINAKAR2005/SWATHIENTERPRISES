@@ -1,0 +1,22 @@
+{
+  "name": "swathienterprises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "build": "npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Priyanka",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "node-mailer": "^0.1.1"
+  }
+}

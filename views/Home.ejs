@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Swathi Enterprises</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <%- include("partials/header.ejs") %>
+    
+    <!-- Slider Section -->
+    <section class="section">
+        <div class="slider">
+            <div class="slides" onclick='gotoProducts()'>
+                <input type="radio" name="radio-btn" id="radio1" checked>
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <div class="slide first">
+                    <img src="/images/corosel_images/GI STITCHING WIRE.png" alt="GI Stitching Wire">
+                </div>
+                <div class="slide">
+                    <img src="/images/corosel_images/Arobond 555.png" alt="Arobond 555">
+                </div>
+         
+                <div class="slide">
+                    <img src="/images/corosel_images/Packing Tapes.png" alt="Packing Tapes">
+                </div>
+                <div class="slide">
+                    <img src="/images/corosel_images/Spare parts.png" alt="Spare Parts">
+                </div>
+                <div class="slide">
+                    <img src="/images/corosel_images/BAILING WIRE.png" alt="Bailing Wire">
+                </div>
+                <div class="slide">
+                    <img src="/images/corosel_images/BOX STRAPPING WIRE.png" alt="Box Strapping Wire">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                </div>
+            </div>
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section class="OurCompany">
+        <h1 class="head ourComp">Swathi Enterprises</h1>
+        <div class="para">
+            <p>Swathi Enterprises excels in providing superior packing materials that ensure durability and reliability. <br>
+                With our commitment to exceptional value, we offer competitive pricing without compromising on quality.
+            </p>
+        </div>
+        <div class="btn-view">
+            <button class="btn-broc View"><a href="/PRIYANKA OFFER LETTER.pdf" target="_blank">View Brochure</a></button>
+            <button class="btn-broc Download"><a href="/PRIYANKA OFFER LETTER.pdf" download="PRIYANKA_OFFER_LETTER.pdf">Download</a></button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="OurProducts">
+        <h1 class="head">Our Products</h1>
+        <div class="container-cards">
+            <div class="row">
+                <div class="item prod1">
+                    <img src="/images/gi_stitching_wire_home.jpg" alt="GI Wires">
+                    <h2>GI Wires</h2>
+                    <div class="btn-products">
+                        <a href="/home/view/2" class="btn view-product">
+                            <i class="fas fa-eye"></i> View Product
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="item prod2">
+                    <img src="/images/air_bubble_roll_home.jpg" alt="Air Bubble Roll">
+                    <h2>Air Bubble Roll</h2>
+                    <div class="btn-products">
+                        <a href="/home/view/7" class="btn view-product">
+                            <i class="fas fa-eye"></i> View Product
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="item prod3">
+                    <img src="/images/box_strapping_home.jpg" alt="Box Strapping roll">
+                    <h2>Box Strapping Roll</h2>
+                    <div class="btn-products">
+                        <a href="/home/view/8" class="btn view-product">
+                            <i class="fas fa-eye"></i> View Product
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="item prod4">
+                    <img src="/images/corrugation_industry_spares.jpg" alt="Spare Parts">
+                    <h2> Spare Parts</h2>
+                    <div class="btn-products">
+                        <a href="/home/view/12" class="btn view-product">
+                            <i class="fas fa-eye"></i> View Product
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="item prod5">
+                    <img src="/images/bailing_wire_home.jpg" alt="Bailing Wire">
+                    <h2>Bailing Wire</h2>
+                    <div class="btn-products">
+                        <a href="/home/view/6" class="btn view-product">
+                            <i class="fas fa-eye"></i> View Product
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="item prod6">
+                    <img src="/images/Multicolour tapes.webp" alt="Tapes">
+                    <h2>Bopp Packing Tapes</h2>
+                    <div class="btn-products">
+                        <a href="/home/view/4" class="btn view-product">
+                            <i class="fas fa-eye"></i> View Product
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Overlay -->
+    <div id="quoteFormOverlay" class="overlay">
+        <div class="popup">
+            <h2>Get Quote</h2>
+            <form id="quoteForm" action="/products/quote/1" method="POST">
+                <input type="hidden" id="productId" name="productId" value="">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email Id" required>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
+                <input type="number" id="quantity" name="quantity" placeholder="Quantity" required>
+                <textarea id="comments" name="comments" placeholder="Comments"></textarea>
+                <div class="form-buttons">
+                    <button type="button" id="clearBtn" class="btnq clear">Clear</button>
+                    <button type="submit" class="btnq submit">Get Quote</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include("partials/footer.ejs") %>
+
+    <!-- JavaScript for Slider and Quote Form -->
+<script type="text/javascript">
+   
+
+    let counter = 1;
+    const slides = document.querySelectorAll('.slides input[type="radio"]');
+    const totalSlides = slides.length;
+    let intervalId;
+
+    // Function to start the automatic slider
+    function startSlider() {
+        intervalId = setInterval(() => {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > totalSlides) {
+                counter = 1;
+            }
+        }, 2000); // Change slide every 5 seconds
+    }
+
+    // Function to stop the automatic slider
+    function stopSlider() {
+        clearInterval(intervalId);
+    }
+
+    // Add event listeners to each radio button for manual control
+    slides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+            stopSlider(); // Stop the automatic slider
+            counter = index + 1; // Update counter to the current slide
+            startSlider(); // Restart the automatic slider
+        });
+    });
+
+    // Start the slider initially
+    startSlider();
+    
+
+    </script>
+</body>
+</html>

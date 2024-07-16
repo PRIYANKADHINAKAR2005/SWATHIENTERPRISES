@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <section class="image-fade-section">
+        <div class="image-fade">
+            <div class="fade-slide" id="slide1">
+                <img src="/images/corosel_images/Arobond 555.png" alt="Arobond 555">
+            </div>
+            <div class="fade-slide" id="slide2">
+                <img src="/images/corosel_images/GI STITCHING WIRE.png" alt="GI Stitsching Wire">
+            </div>
+            <div class="fade-slide" id="slide3">
+                <img src="/images/corosel_images/Packing Tapes.png" alt="Packing Tapes">
+            </div>
+            <div class="fade-slide" id="slide4">
+                <img src="/images/corosel_images/Spare parts.png" alt="Spare Parts">
+            </div>
+            <div class="fade-slide" id="slide5">
+                <img src="/images/corosel_images/BAILING WIRE.png" alt="Bailing wire">
+            </div>
+            <div class="fade-slide" id="slide6">
+                <img src="/images/corosel_images/BOX STRAPPING WIRE.png" alt="Box Strapping Wire">
+            </div>
+        </div>
+    </section>
+    <section class="aboutUUS">
+        <h1 class="head ourComp">About Us</h1>
+   
+    <div class="about-us-container">
+        
+        <div class="about-us-image">
+            <img src="/images/Dhinakar1.png" alt="About Us">
+            <div class="nameprop nam1"><h3>Mr.R.Dhinakar</h3></div>
+            <div class="nameprop nam2"><h3><em>Proprietor</em></h3></div>
+        </div>
+        
+        <div class="about-us-content">
+            
+            <p>Founded in 2004 by <strong style="color:#023a71; font-size:18px;">Mr. Dhinakar</strong>, a mechanical engineering graduate with five years of experience in the packaging industry, Swathi Enterprises has become a renowned supplier of packaging products for the corrugation industry. Our product range includes GI Stitching Wire, BOPP Packing Tapes, Plastic Twine, Book Binding Cloth, Bailing Wire, Edge Protectors, Air Bubble Roll, Box Strapping, and various Machine Spares. We offer these products in diverse specifications to ensure complete client satisfaction.</p>
+            <p>Our mission is to achieve our business objectives and targets in partnership with our customers. Over the years, we have built a reputation for meeting our customers' specific needs promptly and efficiently. Despite our growth, our commitment to providing high-quality packaging products with a simple and direct approach has remained unchanged. We continue to put our hearts into fulfilling our customers' requirements.</p>
+        
+
+        <div class="ContactUs">
+            <button class="Contactus" onclick="window.location.href='/contact';">Contact Us</button>
+        </div>
+    </div>
+    </div>
+</section>
+    
+    
+    <%- include("partials/footer.ejs") %>
+
+    <script type="text/javascript">
+        let currentSlideIndex = 0;
+        const slides = document.getElementsByClassName('fade-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = '0';
+                slides[i].style.zIndex = '0';
+            }
+            slides[index].style.opacity = '1';
+            slides[index].style.zIndex = '1';
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 2 seconds
+        showSlide(currentSlideIndex); // Show the first slide initially
+    </script>
+</body>
+</html>
